@@ -1,0 +1,21 @@
+# Entornos
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datos intermedios generados (se regeneran desde el notebook de EDA)
+data/processed/*.csv
+
+# OS
+.DS_Store
+
+# Herramienta externa usada solo para convertir el enunciado a markdown
+markitdown-main/
+
+# Editor
+.vscode/
+.idea/
