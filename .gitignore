@@ -16,6 +16,9 @@ data/processed/*.csv
 # Herramienta externa usada solo para convertir el enunciado a markdown
 markitdown-main/
 
+# Material de curso convertido a markdown (uso local, no se versiona)
+docs/
+
 # Editor
 .vscode/
 .idea/

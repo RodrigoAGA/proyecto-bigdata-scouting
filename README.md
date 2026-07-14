@@ -7,27 +7,6 @@ El objetivo es reemplazar decisiones basadas en intuición por un sistema analí
 2. Prediga el `Transfer Value` y clasifique el potencial de jóvenes talentos (proyección de `Caps`).
 3. Sustente ante un comité ejecutivo las decisiones de modelado con métricas traducidas a valor de negocio.
 
-Ver el enunciado completo en [`docs/enunciado.md`](docs/enunciado.md) (convertido desde `enunciado.docx`).
-
-## Material de curso (docs/)
-
-Los PDFs de teoría del curso están en la raíz del proyecto y su conversión a markdown (vía
-[markitdown](https://github.com/microsoft/markitdown)) en `docs/`:
-
-| PDF | Markdown |
-| --- | --- |
-| `1. fundamentos del big data.pdf` | `docs/01_fundamentos_del_big_data.md` |
-| `2. infraestructura para datos.pdf` | `docs/02_infraestructura_para_datos.md` |
-| `3. paradigma mapReduce.pdf` | `docs/03_paradigma_mapreduce.md` |
-| `4. hadoop.pdf` | `docs/04_hadoop.md` |
-| `5. spark.pdf` | `docs/05_spark.md` |
-| `abd_usos_bigdata.pdf` | `docs/abd_usos_bigdata.md` |
-| `abd_no_supervisado.pdf` | `docs/abd_no_supervisado.md` |
-| `abd_clasificacion.pdf` | `docs/abd_clasificacion.md` |
-| `abd_regresion.pdf` | `docs/abd_regresion.md` |
-| `introduccion_machine_learning.pdf` | `docs/introduccion_machine_learning.md` |
-| `spark_sql.pdf` | `docs/spark_sql.md` |
-
 ## Estructura del repositorio
 
 ```
@@ -35,8 +14,6 @@ Los PDFs de teoría del curso están en la raíz del proyecto y su conversión a
 ├── data/
 │   ├── raw/              # merged_players.csv original, sin modificar
 │   └── processed/        # datasets limpios generados por el notebook de EDA
-├── docs/
-│   └── enunciado.md      # enunciado del proyecto en markdown
 ├── notebooks/
 │   ├── 01_eda.ipynb              # limpieza, nulos, correlaciones (Fase 1)
 │   ├── 02_clustering.ipynb       # segmentación no supervisada (Fase 2)
