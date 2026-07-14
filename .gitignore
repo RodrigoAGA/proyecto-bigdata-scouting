@@ -7,8 +7,8 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Datos intermedios generados (se regeneran desde el notebook de EDA)
-data/processed/*.csv
+# Datos intermedios generados (se regeneran desde 01_eda.ipynb)
+data/processed/*
 
 # OS
 .DS_Store

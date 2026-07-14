@@ -1,3 +1,5 @@
+pyspark==4.0.3
+py4j==0.10.9.9
 pandas==2.3.3
 numpy==2.0.2
 scikit-learn==1.6.1
@@ -9,3 +11,4 @@ jupyter==1.1.1
 jupyterlab==4.5.9
 notebook==7.5.7
 ipykernel==6.31.0
+nbconvert==7.17.1
