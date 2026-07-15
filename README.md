@@ -77,9 +77,11 @@ de modelar:
   regresión).
 - Columnas con `-` como marcador de nulo (`Caps`, `AT Apps`, `AT Gls`, etc.). `Rec` usa `'- - -'`
   y es categórica, no numérica.
-- `Nat.1`: nombre de columna duplicado (segundo atributo `Nat` = habilidad natural), renombrado a
-  `Habilidad_Natural` para evitar conflictos con APIs que interpretan el punto como acceso a campo
-  anidado.
+- `Nat.1`: **no** es un duplicado de nacionalidad ni de "habilidad natural" — según el diccionario
+  de datos oficial (`docs/Diccionario_Datos_FM23.pdf`) es el atributo `Natural Fitness` (forma
+  física natural / nivel de recuperación entre partidos y lesiones). Se renombró a
+  `Forma_Fisica_Natural` para evitar conflictos con APIs que interpretan el punto como acceso a
+  campo anidado.
 - **Atípicos**: se valida `Height_cm`/`Weight_kg` contra un rango fisiológicamente plausible
   (140–210cm, 50–110kg) y se marcan como nulos los que caen fuera (errores de captura). Los
   atípicos de `Transfer_Value_num` (las superestrellas) **no se tocan**: son justo el segmento que
@@ -119,12 +121,15 @@ de modelar:
   de reducir a 2-3 componentes.
 
 **Fase 2 — Clustering:**
+- Features: atributos técnicos/físicos/mentales, excluyendo los **11** atributos exclusivos de
+  portero según el diccionario de datos (`TRO`, `Ref`, `Pun`, `Cmd`, `Han`, `Aer`, `Com`, `1v1`,
+  `Thr`, `Kic`, `Ecc`).
 - `K=5` (silhouette baja casi monótonamente desde `k=2`; se prioriza granularidad de negocio sobre
   el máximo trivial de silhouette).
-- 5 arquetipos identificados: "Elite/completos" (13,111 jugadores, valor promedio ≈ $5.46M),
-  "Atacantes rápidos/técnicos" (24,253, ≈ $562,943), "Trabajadores disciplinados" (20,446,
-  ≈ $370,797), "Talento físico sin consolidar" (20,014, ≈ $119,030) y "Versátiles de rol" (12,711,
-  ≈ $104,726).
+- 5 arquetipos identificados: "Elite/completos" (13,990 jugadores, valor promedio ≈ $3.83M),
+  "Atacantes rápidos/técnicos" (24,588, ≈ $1.41M), "Trabajadores disciplinados" (20,809,
+  ≈ $192,644), "Talento físico sin consolidar" (20,934, ≈ $129,603) y "Versátiles de rol" (10,214,
+  ≈ $98,781).
 - El motor de "clones" busca, dentro del cluster de una superestrella, jugadores con menor valor de
   mercado y features estadísticamente equivalentes (distancia euclidiana / similitud coseno).
 
