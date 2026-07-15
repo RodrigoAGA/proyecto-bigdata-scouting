@@ -22,3 +22,7 @@ docs/
 # Editor
 .vscode/
 .idea/
+
+# Presentacion ejecutiva generada (entregable local, no se versiona)
+reports/presentacion_ejecutiva.pptx
+~$*.pptx
